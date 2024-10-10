@@ -1,6 +1,7 @@
 package com.ekene.serviceurl_shortener.controller;
 
 import com.ekene.serviceurl_shortener.model.Url;
+import com.ekene.serviceurl_shortener.paylod.UrlData;
 import com.ekene.serviceurl_shortener.service.UrlService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,8 +22,8 @@ public class UrlController {
     private final UrlService urlService;
 
     @PostMapping("/url/shorten")
-    public ResponseEntity<String> shortenUrl(@RequestBody Payload payload) {
-        String shortUrl = urlService.generateShortUrl(payload.longUrl);
+    public ResponseEntity<String> shortenUrl(@RequestBody UrlData payload) {
+        String shortUrl = urlService.generateShortUrl(payload.getUrl());
         return new ResponseEntity<>(shortUrl, HttpStatus.CREATED);
     }
 
@@ -34,5 +35,4 @@ public class UrlController {
                 .build();
     }
 
-    record Payload(String longUrl){}
 }
