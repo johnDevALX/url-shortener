@@ -9,12 +9,13 @@ import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"longUrl"})})
 @Data
-public class Url {
+public class Url implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

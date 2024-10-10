@@ -1,6 +1,6 @@
 package com.ekene.serviceurl_shortener.util;
 
-public class Base62 {
+public class UrlSlugUtil {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     public static String generateShortUrl() {
