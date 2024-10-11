@@ -53,6 +53,6 @@ public class UrlService {
     }
 
     public String getFullShortUrl(String shortCode) {
-        return appConfig.getBaseUrl() + "/" + shortCode;
+        return appConfig.getBaseUrl() + "/v1/" + shortCode;
     }
 }

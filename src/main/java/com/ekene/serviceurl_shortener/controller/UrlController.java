@@ -23,7 +23,7 @@ public class UrlController {
 
     @PostMapping("/url/shorten")
     public ResponseEntity<String> shortenUrl(@RequestBody UrlData payload) {
-        String shortUrl = urlService.generateShortUrl(payload.getUrl());
+        String shortUrl = urlService.generateShortUrl(payload.getFullUrl());
         return new ResponseEntity<>(shortUrl, HttpStatus.CREATED);
     }
 
