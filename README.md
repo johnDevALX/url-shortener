@@ -108,8 +108,8 @@ While this README provides instructions for local deployment using Docker Compos
 - Set up monitoring and logging solutions
 - Implement proper backup and disaster recovery strategies
 
-- For cloud deployment, reach the via the below url
-  - https://url-shortener-3b1o.onrender.com
+- For cloud deployment, reach via the below url
+  - https://url-shortener-jlad.onrender.com
 
 ## Contributing
 
